@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #F5F1E8;
+  --bg-secondary: #EDE8DC;
+  --text-primary: #252525;
+  --text-secondary: #706D65;
+  --accent: #6F8068;
+  --accent-gold: #B79B68;
+  --paper-bg: #FDFCFA;
+  --paper-border: #E8E2D5;
+  --spine-shadow: rgba(0, 0, 0, 0.08);
+  --gutter-gradient: linear-gradient(to right, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.01) 12%, rgba(0,0,0,0) 25%);
+}
+
+/* Theme classes */
+.theme-classic {
+  --bg-primary: #F5F1E8;
+  --bg-secondary: #EDE8DC;
+  --text-primary: #252525;
+  --text-secondary: #706D65;
+  --accent: #6F8068;
+  --paper-bg: #FAF8F5;
+  --paper-border: #E5DFC5;
+}
+
+.theme-ivory {
+  --bg-primary: #FAF6EE;
+  --bg-secondary: #F0EAD8;
+  --text-primary: #2C2825;
+  --text-secondary: #756D63;
+  --accent: #7A896F;
+  --paper-bg: #FFFDF9;
+  --paper-border: #EADECA;
+}
+
+.theme-sepia {
+  --bg-primary: #F4ECD8;
+  --bg-secondary: #E8DCC2;
+  --text-primary: #433422;
+  --text-secondary: #7F6B52;
+  --accent: #8C6D46;
+  --paper-bg: #F7EFE0;
+  --paper-border: #DECBB0;
+}
+
+.theme-parchment {
+  --bg-primary: #EFE7D5;
+  --bg-secondary: #E3D9C3;
+  --text-primary: #383025;
+  --text-secondary: #6E6352;
+  --accent: #6E7E64;
+  --paper-bg: #F5EEDB;
+  --paper-border: #D6C8AC;
+}
+
+.theme-midnight {
+  --bg-primary: #121411;
+  --bg-secondary: #1C1F1A;
+  --text-primary: #E8E3D7;
+  --text-secondary: #9C988D;
+  --accent: #8E9F87;
+  --paper-bg: #1B1E19;
+  --paper-border: #2A2F27;
+}
+
+.theme-forest {
+  --bg-primary: #151C16;
+  --bg-secondary: #1F2820;
+  --text-primary: #E0E7DC;
+  --text-secondary: #8E9E8C;
+  --accent: #9FB895;
+  --paper-bg: #1E281F;
+  --paper-border: #2B3A2C;
+}
+
+.theme-minimal {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F3F4F6;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --accent: #4B5563;
+  --paper-bg: #FFFFFF;
+  --paper-border: #E5E7EB;
+}
+
+/* Subtle Paper Texture via SVG data URI */
+.paper-texture {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.paper-texture-subtle {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+}
+
+/* 3D Realistic Book Shadows & Gutters */
+.book-spine-gutter-left {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.015) 80%, rgba(0, 0, 0, 0.08) 98%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.book-spine-gutter-right {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.015) 80%, rgba(0, 0, 0, 0.08) 98%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.book-edge-shadow-left {
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.3), -8px 0 20px -8px rgba(0, 0, 0, 0.2);
+}
+
+.book-edge-shadow-right {
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.3), 8px 0 20px -8px rgba(0, 0, 0, 0.2);
+}
+
+/* Center spine groove */
+.spine-groove {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(111, 128, 104, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(111, 128, 104, 0.45);
+}
+
+/* Text highlight styles */
+mark.highlight-sage {
+  background-color: rgba(111, 128, 104, 0.25);
+  color: inherit;
+  border-bottom: 2px solid #6F8068;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
+mark.highlight-gold {
+  background-color: rgba(183, 155, 104, 0.25);
+  color: inherit;
+  border-bottom: 2px solid #B79B68;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
+mark.highlight-rose {
+  background-color: rgba(199, 125, 125, 0.25);
+  color: inherit;
+  border-bottom: 2px solid #C77D7D;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
+mark.highlight-search {
+  background-color: rgba(234, 179, 8, 0.4);
+  color: inherit;
+  font-weight: 600;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* StPageFlip custom container fixes */
+.stf__parent {
+  display: block !important;
+  margin: 0 auto;
+}
+
+.stf__wrapper {
+  overflow: visible !important;
+}
+
+/* Smooth transitions */
+.smooth-book-theme {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
