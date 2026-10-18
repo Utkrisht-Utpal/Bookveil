@@ -8,6 +8,27 @@ export default {
   theme: {
     extend: {
       colors: {
+        bookveil: {
+          bg: '#0E0C0A',
+          surface: '#171410',
+          card: '#1F1B16',
+          'card-hover': '#28231C',
+          border: '#383024',
+          'border-subtle': '#2A241C',
+          gold: '#C9A86A',
+          'gold-light': '#E5C88F',
+          'gold-dark': '#A08044',
+          parchment: '#EDE8DC',
+          charcoal: '#252525',
+          muted: '#8E8575',
+          'muted-dark': '#5C5549',
+          sage: '#6F8068',
+          'sage-dark': '#566650',
+          'sage-light': '#8E9F87',
+          ivory: '#F5F1E8',
+          sepia: '#F4ECD8',
+          forest: '#1B241C',
+        },
         turna: {
           bg: '#F5F1E8',
           parchment: '#EDE8DC',
@@ -22,11 +43,6 @@ export default {
           'dark-surface': '#22251F',
           'dark-text': '#E8E3D7',
           'dark-muted': '#9C988D',
-          sepia: '#F4ECD8',
-          'sepia-text': '#433422',
-          forest: '#1B241C',
-          'forest-surface': '#253026',
-          'forest-text': '#E2E8DF'
         }
       },
       fontFamily: {
