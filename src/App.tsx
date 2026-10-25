@@ -82,7 +82,7 @@ export function App() {
   const activeBook = books.find((b) => b.id === activeBookId);
 
   return (
-    <div className="min-h-screen bg-[#F5F1E8] text-[#252525] font-sans flex flex-col selection:bg-[#6F8068]/20">
+    <div className="min-h-screen bg-[#0E0C0A] text-[#EDE8DC] font-sans flex flex-col selection:bg-[#C9A86A]/30 selection:text-[#FAF8F5]">
       {/* Top Navigation Bar (Shown on Landing and Library, Reader has its own floating toolbar) */}
       {currentView !== 'reader' && (
         <Navbar
@@ -102,13 +102,16 @@ export function App() {
         {currentView === 'landing' && (
           <LandingView
             onStartReading={() => setCurrentView('library')}
-            onExploreReader={() => {
-              if (books.length > 0) {
+            onExploreReader={(bookId) => {
+              if (bookId) {
+                handleOpenBook(bookId);
+              } else if (books.length > 0) {
                 handleOpenBook(books[0].id);
               } else {
                 setCurrentView('library');
               }
             }}
+            onBookUploaded={handleBookUploaded}
           />
         )}
 
